@@ -1,0 +1,22 @@
+{
+    "todos": [
+        {
+            "id": 0,
+            "title": "task one",
+            "description": "loremj",
+            "done": false
+        },
+        {
+            "id": 1,
+            "title": "task two",
+            "description": "loremj",
+            "done": false
+        },
+        {
+            "id": 2,
+            "title": "task dos",
+            "description": "loremj",
+            "done": false
+        }
+]
+}
