@@ -1,18 +1,26 @@
 import React, { Component } from "react";
 
 export default class TaskForm extends Component {
-    
-    onSubmit = () =>{
-        alert("Purta")
+
+    state = {
+        title: '',
+        description: ''
     }
-    
+    onSubmit = (e) => {
+console.log(this.state);
+e.preventDefault();
+        }
+    onChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value });
+
+    }
     render() {
-        return(
+        return (
             <form onSubmit={this.onSubmit}>
-                <input type="text" placeholder="Write a task"></input>
+                <input type="text" name="title" placeholder="Write a task" onChange={this.onChange} value={this.state.title}></input>
                 <br></br>
                 <br></br>
-                <textarea placeholder="Write a description"></textarea>
+                <textarea name="description" placeholder="Write a description" onChange={this.onChange} value={this.state.description}></textarea>
                 <input type="submit"></input>
             </form>
         )
